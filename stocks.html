@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Stocks | By HMF</title>
+    <link rel="stylesheet" href="styling.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- Page Title -->
+      <h1 id="page-title">Welcome to INST377 A2: "Stocks"</h1>
+
+      <!-- Nav Bar  -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="home.html"> Home </a></li>
+          <li><a href="stocks.html"> Stocks </a></li>
+          <li><a href="dogs.html"> Dogs </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page Subtitle -->
+    <h2>Let's chart some stocks!</h2>
+
+    <!-- Form -->
+    <form id="stock-form" onsubmit="lookUpStock(); return false;">
+      <!-- Stock Ticker Symbol -->
+      <label for="myinput">Enter STOCK TICKER SYMBOL: </label>
+      <input id="myinput" type="text" maxlength="5" required />
+
+      <!-- Dropdown -->
+      <select id="select">
+        <option value="30">30 Days</option>
+        <option value="60">60 Days</option>
+        <option value="90">90 Days</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit">Look up Stock Ticker</button>
+    </form>
+
+    <!-- Hidden Chart -->
+    <div id="chart">
+      <canvas id="mychart"></canvas>
+    </div>
+
+    <!-- Top FIVE stocks -->
+    <div id="top-five-stocks">
+      <table id="tableid">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Comment Count</th>
+            <th>Sentiment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate this -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Audio Control -->
+    <div id="audio-control">
+      <h3>In this webpage there are options to navigate using AUDIO!</h3>
+      <p>Ensure your microphone is enabled to use this feature.</p>
+      <ul>
+        <li>
+          Search Stock
+          <ul>
+            <li>Say: <b>Look up &lt; stock &gt;</b></li>
+          </ul>
+        </li>
+        <li>
+          Navigate to a different page
+          <ul>
+            <li>Say: <b>Navigate to &lt; page &gt;</b></li>
+          </ul>
+        </li>
+        <li>
+          Change page color
+          <ul>
+            <li>Say: <b>Change color to &lt; color &gt;</b></li>
+          </ul>
+        </li>
+        <li>
+          Say Hello Back to you!
+          <ul>
+            <li>Say: <b>Hello</b></li>
+          </ul>
+        </li>
+      </ul>
+      <button id="turn-on" onclick="annyang.resume()">Turn on Listening</button>
+      <button id="turn-off" onclick="annyang.pause()">
+        Turn off Listening
+      </button>
+    </div>
+
+    <footer>
+      <p>This website was developed by HMF for UMD's INST 377.</p>
+    </footer>
+  </body>
+</html>
