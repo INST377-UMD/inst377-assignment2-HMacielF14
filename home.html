@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>INST 377 - A2 | By HMF</title>
+    <link rel="stylesheet" href="styling.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Page Title -->
+      <h1 id="page-title">Welcome to INST377 A2: "Home Page"</h1>
+
+      <!-- Nav Bar  -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="home.html"> Home </a></li>
+          <li><a href="stocks.html"> Stocks </a></li>
+          <li><a href="dogs.html"> Dogs </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page Subtitle -->
+    <h2>These are some activities we can try!</h2>
+
+    <!-- Two Buttons -->
+    <div id="two-buttons">
+      <button class="button-86" onclick="location.href='stocks.html'">
+        Stocks
+      </button>
+      <button class="button-86" onclick="location.href='dogs.html'">
+        Dogs
+      </button>
+    </div>
+
+    <!-- Quote of the Day -->
+    <div id="quote-div">
+      <h3>Payload of the Day!</h3>
+      <p id="q-text"></p>
+      <p id="q-author"></p>
+    </div>
+
+    <!-- Audio Control -->
+    <div id="audio-control">
+      <h3>In this webpage there are options to navigate using AUDIO!</h3>
+      <p>Ensure your microphone is enabled to use this feature.</p>
+      <ul>
+        <li>
+          Navigate to a different page
+          <ul>
+            <li>Say: <b>Navigate to &lt; page &gt;</b></li>
+          </ul>
+        </li>
+        <li>
+          Change page color
+          <ul>
+            <li>Say: <b>Change color to &lt; color &gt;</b></li>
+          </ul>
+        </li>
+        <li>
+          Say Hello Back to you!
+          <ul>
+            <li>Say: <b>Hello</b></li>
+          </ul>
+        </li>
+      </ul>
+      <button id="turn-on" onclick="annyang.resume()">Turn on Listening</button>
+      <button id="turn-off" onclick="annyang.pause()">
+        Turn off Listening
+      </button>
+    </div>
+    <footer>
+      <p>This website was developed by HMF for UMD's INST 377.</p>
+    </footer>
+  </body>
+</html>
